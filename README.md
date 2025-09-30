@@ -1,0 +1,2 @@
+# ModeloIAEntrenar
+Entrenar modelo IA
