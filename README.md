@@ -3,21 +3,15 @@ Entrenar modelo IA
 
 Predicción de la probabilidad de obtener una medalla olímpica en función de características demográficas y físicas del atleta y del país de origen.
 
+##Elección del dataset
 
-
-•	Elección del dataset
-
-o	Dataset: 120 years of Olympic history: athletes and results
-
+###Dataset: 120 years of Olympic history: athletes and results
 https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data
 
-o	¿Por qué?
-
+###¿Por qué?
 Los Juegos Olímpicos son uno de los eventos deportivos más importantes del mundo, seguidos por millones de personas. Poder predecir la probabilidad de que un atleta gane una medalla, considerando sus características físicas y demográficas resulta un problema atractivo tanto para el público general como para la investigación académica. Es un tema transversal y multidisciplinar: combina historia, geopolítica, economía, cultura y deporte.
 
-
-o	Posibles aplicaciones:
-
+###Posibles aplicaciones:
 •	Aplicaciones en el ámbito deportivo
 
  	Detección de talento: ayudar a identificar atletas con mayor potencial según sus características físicas y demográficas.
@@ -32,10 +26,8 @@ o	Posibles aplicaciones:
 •	Aplicaciones en investigación y análisis
 
  	Análisis de desigualdades: explorar cómo el género o el país afectan las oportunidades de ganar medallas.
-
-
  
-•	Definición del problema
+##Definición del problema
 
 ¿Es posible predecir si un atleta ganará una medalla olímpica utilizando como variables explicativas su sexo, edad, estatura, peso y país de origen?
 Clasificación binaria.
@@ -46,38 +38,29 @@ El objetivo es clasificar cada atleta, utilizando las características físicas 
  
 2.	Clase 0: No Gana Medalla (NA)
 
+##Selección de la variable dependiente y explicativas
 
+###Variable objetivo: ganar medalla (sí/no) o tipo de medalla (oro/plata/bronce/ninguna).
 
-
-•	Selección de la variable dependiente y explicativas
-
-o	Variable objetivo: ganar medalla (sí/no) o tipo de medalla (oro/plata/bronce/ninguna).
-
-o	Variables de entrada/Features explicativas:
+###Variables de entrada/Features explicativas:
  	Sexo – categórica
  	Edad – numérica
  	Estatura - numérica
  	Peso - numérica
  	País de origen - categórica
-
-
-
  
-•	Exploración inicial de datos (EDA)
+##Exploración inicial de datos (EDA)
 
 El dataset tiene 15 columnas y 271.116 filas (participaciones individuales).
 
-Análisis de la variable objetivo
-
+###Análisis de la variable objetivo
 0 (No Medalla)	  231.333	  85,3%
 
 1 (Ganó Medalla)	39.783	  14,7% 
 
 Este desequilibrio se origina en el hecho de que la cantidad de participantes en los Juegos Olímpicos es considerablemente mayor que la de ganadores de medallas.
 
-
-Análisis de datos faltantes (Nulos)
-
+###Análisis de datos faltantes (Nulos)
 Años	  9.484	  3,5%
 
 Altura	60.171	22,2%
@@ -87,8 +70,7 @@ Peso	  62.875	23,2%
 Las variables altura y peso tienen más de una quinta parte de sus valores faltantes.
 
 
-Exploración de Variables Numéricas (Age, Height, Weight)
-
+###Exploración de Variables Numéricas (Age, Height, Weight)
 Variable	Media aprox.	Mediana aprox.	Desviación Estándar aprox.
 
 Años	    25,6 años	    25 años	        6,4 años
@@ -101,7 +83,7 @@ Las distribuciones son relativamente normales, pero con colas amplias debido a l
 Relación con la Medalla
 
 
-Variable	Comparación Ganó Medalla
+###Variable	Comparación Ganó Medalla
 0 vs. 1	Implicación Predictiva
 
 Años	  La mediana de edad de los ganadores de medalla es a menudo ligeramente superior (ej. 26 años) a la de los no ganadores (ej. 25 años).	La experiencia es un factor. Atletas muy jóvenes o muy mayores tienen menor probabilidad.
@@ -111,8 +93,7 @@ Altura	La mediana de altura de los ganadores es ligeramente superior a la de los
 Peso	  La mediana de peso de los ganadores es ligeramente superior a la de los no ganadores.	La relación peso/altura (IMC) podría ser más predictiva que el peso solo.
 
 
-Exploración de Variables Categóricas (Sex, NOC)
-
+###Exploración de Variables Categóricas (Sex, NOC)
 Sexo
 Sexo	Tasa de éxito
 M (Male)	  13,7%
@@ -130,26 +111,17 @@ GDR (Alemania Oriental)	1.500	  32,0%
 
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
 
-
-
-
-
-Preprocesamiento de datos
-
-
+##Preprocesamiento de datos
 		
-		Valores nulos:
+		###Valores nulos:
 		
 			Columna Medal - Todos los valores NaN (Not a Number, que son los valores faltantes) reemplazados con el texto 'NoMedal'. Creada una nueva columna llamada Medaled. Asignado 1 si el valor es 'Medal' y 0 si es 'NoMedal'.
 			
 			Columnas Height y Weight - Imputación Segmentada por Deporte. Rellena los valores nulos de Height/Weight con la mediana de Height/Weight calculada solo para el deporte de esa fila.
 			
 			Columna Age - Imputación Global. Rellena los valores nulos con la mediana de la columna Age completa.
-
 		
-		
-			
-		Definición de variables:
+		###Definición de variables:
 		
 			Columnas numéricas  ['Age', 'Height', 'Weight']
 			
@@ -157,10 +129,7 @@ Preprocesamiento de datos
 			
 			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 si ganó medalla, 0 si no).
 
-		
-
-
-    	División en train/test:
+    	###División en train/test:
 		
 			Train - 70% de los datos para entrenar el modelo, una división aleatoria.
 			
@@ -170,36 +139,23 @@ Preprocesamiento de datos
 			
 			RSEED (42) para garantizar la reproducibilidad del modelo.
 
+##Entrenamiento de modelos
+
+		###Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
 	
+		###Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
+	
+##Evaluación del modelo
+	
+		###Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
 		
-			
-
-Entrenamiento de modelos
-
-		Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
-	
-		Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
-
-	
-
-
-	
-Evaluación del modelo
-	
-		Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
+		###Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
 		
-		Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
-		
-		F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
-
-
- 
+		###F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
 	
-Conclusiones y comunicación de resultados
-
+##Conclusiones y comunicación de resultados
 		El Random Forest está funcionando como un clasificador perezoso, aprovechando el gran número de no ganadores. Acierta en el 76% de las veces. Sin embargo, en un problema tan desbalanceado, esta métrica es engañosa. Sus dos mayores problemas son:
 		
 			1.	Demasiadas alarmas falsas (FP): 9.192 falsas predicciones de medalla.
 			
 			2.	Perdiendo demasiados ganadores (FN): 6.756 ganadores reales que el modelo no pudo ver.
-
