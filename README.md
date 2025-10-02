@@ -195,3 +195,10 @@ Evaluación del modelo
  
 	
 Conclusiones y comunicación de resultados
+
+		El Random Forest está funcionando como un clasificador perezoso, aprovechando el gran número de no ganadores. Sus dos mayores problemas son:
+		
+			1.	Demasiadas alarmas falsas (FP): 9.192 falsas predicciones de medalla.
+			
+			2.	Perdiendo demasiados ganadores (FN): 6.756 ganadores reales que el modelo no pudo ver.
+
