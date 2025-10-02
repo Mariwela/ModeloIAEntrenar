@@ -138,26 +138,41 @@ Preprocesamiento de datos
 
 
 		
-		Además de valores nulos y atípicos: 
+		Valores nulos:
+		
+			Columna Medal - Todos los valores NaN (Not a Number, que son los valores faltantes) reemplazados con el texto 'NoMedal'. Creada una nueva columna llamada Medaled. Asignado 1 si el valor es 'Medal' y 0 si es 'NoMedal'.
+			
+			Columnas Height y Weight - Imputación Segmentada por Deporte. Rellena los valores nulos de Height/Weight con la mediana de Height/Weight calculada solo para el deporte de esa fila.
+			
+			Columna Age - Imputación Global. Rellena los valores nulos con la mediana de la columna Age completa.
+
 		
 		
 			
-		   Codificación de variables categóricas.
+		Definición de variables:
+		
+			Columnas numéricas  ['Age', 'Height', 'Weight']
+			
+			Columnas categóricas ['Sex', 'Sport', 'Team']
+			
+			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 si ganó medalla, 0 si no).
+
 		
 
-	
-	
-		
-		  Normalización o estandarización si procede.
-		
 
- 
+    	División en train/test:
+		
+			Train - 70% de los datos para entrenar el modelo, una división aleatoria.
+			
+			Test - 30% de los datos para probarlo, división aleatoria.
+			
+			Dado el desbalance de clases (15% medallas, 85% no medallas) está asegurado que la proporción de medallas vs. no medallas sea la misma en el conjunto de entrenamiento y en el de prueba.
+			
+			RSEED (42) para garantizar la reproducibilidad del modelo.
 
-    		División en train/test (o cross-validation).
 	
 		
-		
-	
+			
 
 
 Entrenamiento de modelos
