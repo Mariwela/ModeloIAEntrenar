@@ -129,3 +129,52 @@ URS (Unión Soviética)	2.500	    26,0%
 GDR (Alemania Oriental)	1.500	  32,0%
 
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
+
+
+
+
+
+Preprocesamiento de datos
+
+
+		
+		Además de valores nulos y atípicos: 
+		
+		
+			
+		   Codificación de variables categóricas.
+		
+
+	
+	
+		
+		  Normalización o estandarización si procede.
+		
+
+ 
+
+    División en train/test (o cross-validation).
+	
+		
+		
+	
+
+
+	
+	Entrenamiento de modelos
+	
+		
+	   Que documenten los hiperparámetros usados.
+	
+	
+	Evaluación del modelo
+	
+		
+		  Que escojan métricas apropiadas (RMSE, MAE, Accuracy, F1, ROC-AUC, etc.).
+    
+		
+		  Que interpreten los resultados, no solo los reporten.
+
+ 
+	
+	Conclusiones y comunicación de resultados
