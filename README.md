@@ -2,7 +2,7 @@
 
 Predicción de la probabilidad de obtener una medalla olímpica en función de características demográficas y físicas del atleta y del país de origen.
 
-## Elección del dataset
+## 🏊 Elección del dataset
 
 ### Dataset: 120 years of Olympic history: athletes and results
 https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data
@@ -26,7 +26,7 @@ Los Juegos Olímpicos son uno de los eventos deportivos más importantes del mun
 
  	Análisis de desigualdades: explorar cómo el género o el país afectan las oportunidades de ganar medallas.
  
-## Definición del problema
+## 🎾 Definición del problema
 
 ¿Es posible predecir si un atleta ganará una medalla olímpica utilizando como variables explicativas su sexo, edad, estatura, peso y país de origen?
 Clasificación binaria.
@@ -49,23 +49,23 @@ ganar medalla (sí/no) o tipo de medalla (oro/plata/bronce/ninguna).
  	Peso - numérica
  	País de origen - categórica
  
-## Exploración inicial de datos (EDA)
+## 🤼 Exploración inicial de datos (EDA)
 
 El dataset tiene 15 columnas y 271.116 filas (participaciones individuales).
 
 ### Análisis de la variable objetivo
-0 (No Medalla)	  231.333	  	85,3%
+0 (No Medalla)	  	231.333	  		85,3%
 
-1 (Ganó Medalla)	39.783	  	14,7% 
+1 (Ganó Medalla)	39.783	  		14,7% 
 
 Este desequilibrio se origina en el hecho de que la cantidad de participantes en los Juegos Olímpicos es considerablemente mayor que la de ganadores de medallas.
 
 ### Análisis de datos faltantes (Nulos)
-Años	  	9.484	  	3,5%
+Años	  	9.484	  		3,5%
 
-Altura		60.171		22,2%
+Altura		60.171			22,2%
 
-Peso	  	62.875		23,2%
+Peso	  	62.875			23,2%
 
 Las variables altura y peso tienen más de una quinta parte de sus valores faltantes.
 
@@ -108,7 +108,7 @@ GDR (Alemania Oriental)		1.500	  				32,0%
 
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
 
-## Preprocesamiento de datos	
+## 🛶 Preprocesamiento de datos	
 ### Valores nulos:
 		
 			Columna Medal - Todos los valores NaN (Not a Number, que son los valores faltantes) reemplazados con el texto 'NoMedal'. Creada una nueva columna llamada Medaled. Asignado 1 si el valor es 'Medal' y 0 si es 'NoMedal'.
@@ -135,21 +135,21 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 			
 			RSEED (42) para garantizar la reproducibilidad del modelo.
 
-## Entrenamiento de modelos
+## 🏋️ Entrenamiento de modelos
 
-### Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
+		Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
 	
-### Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
+		Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
 	
-## Evaluación del modelo
+## 🤺 Evaluación del modelo
 	
-### Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
+		Precision (Precisión)	0,27	MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
 		
-### Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
+		Recall (Sensibilidad)	0,34	BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
 		
-### F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
+		F1-Score				0,30	MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
 	
-## Conclusiones y comunicación de resultados
+## 🥇 Conclusiones y comunicación de resultados
 		El Random Forest está funcionando como un clasificador perezoso, aprovechando el gran número de no ganadores. Acierta en el 76% de las veces. Sin embargo, en un problema tan desbalanceado, esta métrica es engañosa. Sus dos mayores problemas son:
 		
 			1.	Demasiadas alarmas falsas (FP): 9.192 falsas predicciones de medalla.
