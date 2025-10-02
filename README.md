@@ -40,7 +40,7 @@ El objetivo es clasificar cada atleta, utilizando las características físicas 
 ## Selección de la variable dependiente y explicativas
 
 ### Variable objetivo:
-ganar medalla (sí/no) o tipo de medalla (oro/plata/bronce/ninguna).
+ganar medalla (sí/no)
 
 ### Variables de entrada/Features explicativas:
  	Sexo – categórica
