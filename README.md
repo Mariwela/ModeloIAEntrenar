@@ -109,7 +109,7 @@ GDR (Alemania Oriental)		1.500	  				32,0%
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
 
 ## Preprocesamiento de datos	
-		### Valores nulos:
+### Valores nulos:
 		
 			Columna Medal - Todos los valores NaN (Not a Number, que son los valores faltantes) reemplazados con el texto 'NoMedal'. Creada una nueva columna llamada Medaled. Asignado 1 si el valor es 'Medal' y 0 si es 'NoMedal'.
 			
@@ -117,7 +117,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 			
 			Columna Age - Imputación Global. Rellena los valores nulos con la mediana de la columna Age completa.
 		
-		### Definición de variables:
+### Definición de variables:
 		
 			Columnas numéricas  ['Age', 'Height', 'Weight']
 			
@@ -125,7 +125,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 			
 			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 si ganó medalla, 0 si no).
 
-    	### División en train/test:
+### División en train/test:
 		
 			Train - 70% de los datos para entrenar el modelo, una división aleatoria.
 			
@@ -137,17 +137,17 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 
 ## Entrenamiento de modelos
 
-		### Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
+### Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
 	
-		### Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
+### Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
 	
 ## Evaluación del modelo
 	
-		### Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
+### Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
 		
-		### Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
+### Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
 		
-		### F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
+### F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
 	
 ## Conclusiones y comunicación de resultados
 		El Random Forest está funcionando como un clasificador perezoso, aprovechando el gran número de no ganadores. Acierta en el 76% de las veces. Sin embargo, en un problema tan desbalanceado, esta métrica es engañosa. Sus dos mayores problemas son:
