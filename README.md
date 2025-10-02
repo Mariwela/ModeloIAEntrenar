@@ -145,7 +145,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 	
 ## 🤺 Evaluación del modelo
 	
-		Precision (Precisión)	0,27	MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
+		Precision (Precisión)	0,27	MUY BAJO. El modelo genera muchísimos Falsos Positivos. Cuando predice que un atleta ganará medalla, solo acierta el 27% de las veces.
 		
 		Recall (Sensibilidad)	0,34	BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
 		
