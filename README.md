@@ -1,5 +1,4 @@
 # ModeloIAEntrenar
-Entrenar modelo IA
 
 Predicción de la probabilidad de obtener una medalla olímpica en función de características demográficas y físicas del atleta y del país de origen.
 
@@ -55,18 +54,18 @@ ganar medalla (sí/no) o tipo de medalla (oro/plata/bronce/ninguna).
 El dataset tiene 15 columnas y 271.116 filas (participaciones individuales).
 
 ### Análisis de la variable objetivo
-0 (No Medalla)	  231.333	  85,3%
+0 (No Medalla)	  231.333	  	85,3%
 
-1 (Ganó Medalla)	39.783	  14,7% 
+1 (Ganó Medalla)	39.783	  	14,7% 
 
 Este desequilibrio se origina en el hecho de que la cantidad de participantes en los Juegos Olímpicos es considerablemente mayor que la de ganadores de medallas.
 
 ### Análisis de datos faltantes (Nulos)
-Años	  9.484	  3,5%
+Años	  	9.484	  	3,5%
 
-Altura	60.171	22,2%
+Altura		60.171		22,2%
 
-Peso	  62.875	23,2%
+Peso	  	62.875		23,2%
 
 Las variables altura y peso tienen más de una quinta parte de sus valores faltantes.
 
@@ -75,9 +74,9 @@ Variable	Media aprox.	Mediana aprox.	Desviación Estándar aprox.
 
 Años	    25,6 años	    25 años	        6,4 años
 
-Altura	  175,3 cm	    175,0 cm	      10,5 cm
+Altura	  	175,3 cm	    175,0 cm	    10,5 cm
 
-Peso	    70,7 kg	      70,0 kg	        14,3 kg
+Peso	    70,7 kg	      	70,0 kg	        14,3 kg
 
 Las distribuciones son relativamente normales, pero con colas amplias debido a la variedad de deportes (ej. un gimnasta de 14 años vs. un tirador de 60 años).
 Relación con la Medalla
@@ -94,18 +93,18 @@ Peso	  La mediana de peso de los ganadores es ligeramente superior a la de los n
 ### Exploración de Variables Categóricas (Sex, NOC)
 Sexo
 Sexo	Tasa de éxito
-M (Male)	  13,7%
-F (Female)	16,8%
+M (Male)	  	13,7%
+F (Female)		16,8%
 
 Las mujeres tienen una tasa de éxito por participación ligeramente superior a la de los hombres. Esto puede deberse a la menor variedad de eventos de participación femenina en los primeros años del historial olímpico.
 
 
 País de Origen
 
-País (NOC)	Total de medallas	Tasa de éxito
-USA	                  5.600	    19,5%
-URS (Unión Soviética)	2.500	    26,0%
-GDR (Alemania Oriental)	1.500	  32,0%
+País (NOC)				Total de medallas		Tasa de éxito
+USA	                  		5.600	    			19,5%
+URS (Unión Soviética)		2.500	    			26,0%
+GDR (Alemania Oriental)		1.500	  				32,0%
 
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
 
@@ -136,7 +135,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 			
 			RSEED (42) para garantizar la reproducibilidad del modelo.
 
-##Entrenamiento de modelos
+## Entrenamiento de modelos
 
 		### Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
 	
