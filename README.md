@@ -153,21 +153,21 @@ Preprocesamiento de datos
 
  
 
-    División en train/test (o cross-validation).
+    		División en train/test (o cross-validation).
 	
 		
 		
 	
 
 
-	
-	Entrenamiento de modelos
+Entrenamiento de modelos
 	
 		
 	   Que documenten los hiperparámetros usados.
 	
+
 	
-	Evaluación del modelo
+Evaluación del modelo
 	
 		
 		  Que escojan métricas apropiadas (RMSE, MAE, Accuracy, F1, ROC-AUC, etc.).
@@ -177,4 +177,4 @@ Preprocesamiento de datos
 
  
 	
-	Conclusiones y comunicación de resultados
+Conclusiones y comunicación de resultados
