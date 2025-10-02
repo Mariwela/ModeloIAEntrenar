@@ -78,17 +78,19 @@ Altura	  	175,3 cm	    175,0 cm	    10,5 cm
 
 Peso	    70,7 kg	      	70,0 kg	        14,3 kg
 
-Las distribuciones son relativamente normales, pero con colas amplias debido a la variedad de deportes (ej. un gimnasta de 14 años vs. un tirador de 60 años).
-Relación con la Medalla
+Las distribuciones son relativamente normales.
 
 ### Variable	Comparación Ganó Medalla
 0 vs. 1	Implicación Predictiva
 
-Años	  La mediana de edad de los ganadores de medalla es a menudo ligeramente superior (ej. 26 años) a la de los no ganadores (ej. 25 años).	La experiencia es un factor. Atletas muy jóvenes o muy mayores tienen menor probabilidad.
+Años
+La mediana de edad de los ganadores de medalla es a menudo ligeramente superior a la de los no ganadores.	La experiencia es un factor. Atletas muy jóvenes o muy mayores tienen menor probabilidad.
 
-Altura	La mediana de altura de los ganadores es ligeramente superior a la de los no ganadores.	No hay una altura "óptima" general, pero en deportes clave (baloncesto, natación), la altura alta es un fuerte predictor.
+Altura
+La mediana de altura de los ganadores es ligeramente superior a la de los no ganadores.	No hay una altura "óptima" general, pero en deportes clave (baloncesto, natación), la altura alta es un fuerte predictor.
 
-Peso	  La mediana de peso de los ganadores es ligeramente superior a la de los no ganadores.	La relación peso/altura (IMC) podría ser más predictiva que el peso solo.
+Peso
+La mediana de peso de los ganadores es ligeramente superior a la de los no ganadores.	La relación peso/altura (IMC) podría ser más predictiva que el peso solo.
 
 ### Exploración de Variables Categóricas (Sex, NOC)
 Sexo
@@ -121,9 +123,9 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 		
 			Columnas numéricas  ['Age', 'Height', 'Weight']
 			
-			Columnas categóricas ['Sex', 'Sport', 'Team']
+			Columnas categóricas ['Sex', 'Team']
 			
-			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 si ganó medalla, 0 si no).
+			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 gana medalla, 0 no).
 
 ### División en train/test:
 		
