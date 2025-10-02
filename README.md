@@ -174,12 +174,14 @@ Preprocesamiento de datos
 		
 			
 
-
 Entrenamiento de modelos
+
+		Pipeline de scikit-learn - transformaciones que se ejecutan automáticamente en orden.
 	
-		
-	   Que documenten los hiperparámetros usados.
+		Random Forest - 200 árboles predice un resultado (Medalla o No Medalla).
+
 	
+
 
 	
 Evaluación del modelo
