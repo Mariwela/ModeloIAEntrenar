@@ -186,11 +186,12 @@ Entrenamiento de modelos
 	
 Evaluación del modelo
 	
+		Precision (Precisión)	0,27 MUY BAJO. El modelo genera muchísimos Falsos Positivos (atletas que predice que ganan, pero en realidad no lo hacen).
 		
-		  Que escojan métricas apropiadas (RMSE, MAE, Accuracy, F1, ROC-AUC, etc.).
-    
+		Recall (Sensibilidad)	0,34 BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
 		
-		  Que interpreten los resultados, no solo los reporten.
+		F1-Score			0,30 MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
+
 
  
 	
