@@ -145,11 +145,15 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 	
 ## 🤺 Evaluación del modelo
 	
-		Precision (Precisión)	0,50	De todos los atletas que tu modelo selecciona como posibles ganadores (predicciones positivas), uno de cada dos es, en realidad, un medallista.
+		Precision (Precisión)	(0,50)	De todos los atletas que modelo selecciona como posibles ganadores (predicciones positivas), uno de cada dos es, en realidad, un medallista.
 		
-		Recall (Sensibilidad)	0,46	De todos los atletas que realmente ganaron medalla, tu modelo logró identificar al 46%.
+		Recall (Sensibilidad)	(0,46)	De todos los atletas que realmente ganaron medalla, el modelo logró identificar al 46%.
 		
-		F1-Score				0,48	Buen resultado para un problema tan desbalanceado.
+		F1-Score				(0,48)	Buen resultado para un problema tan desbalanceado.
+
+		Accuracy 				(0.85)	Acierta en el 85% de las predicciones totales.
+
+		
 	
 ## 🥇 Conclusiones y comunicación de resultados
 		El modelo es una herramienta valiosa y funcional para identificar atletas con potencial de medalla, logrando un desempeño adecuado a pesar del gran desbalance de datos.
