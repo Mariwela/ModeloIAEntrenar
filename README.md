@@ -48,6 +48,7 @@ ganar medalla (sí/no)
  	Estatura - numérica
  	Peso - numérica
  	País de origen - categórica
+	Sport - categórica
  
 ## 🤼 Exploración inicial de datos (EDA)
 
@@ -123,7 +124,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 		
 			Columnas numéricas  ['Age', 'Height', 'Weight']
 			
-			Columnas categóricas ['Sex', 'Team']
+			Columnas categóricas ['Sex', 'Sport', 'Team']
 			
 			Creada la matriz de features (X), que contiene todas las variables de entrada combinadas y el vector objetivo (y), que contiene la variable que el modelo debe predecir (1 gana medalla, 0 no).
 
