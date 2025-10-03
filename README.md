@@ -145,15 +145,11 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 	
 ## 🤺 Evaluación del modelo
 	
-		Precision (Precisión)	0,27	MUY BAJO. El modelo genera muchísimos Falsos Positivos. Cuando predice que un atleta ganará medalla, solo acierta el 27% de las veces.
+		Precision (Precisión)	0,50	De todos los atletas que tu modelo selecciona como posibles ganadores (predicciones positivas), uno de cada dos es, en realidad, un medallista.
 		
-		Recall (Sensibilidad)	0,34	BAJO. De todos los atletas que realmente ganaron medalla (10.226 atletas), el modelo solo fue capaz de identificar correctamente al 34%. El 66% de los verdaderos ganadores se perdieron (Falsos Negativos).
+		Recall (Sensibilidad)	0,46	De todos los atletas que realmente ganaron medalla, tu modelo logró identificar al 46%.
 		
-		F1-Score				0,30	MUY BAJO. El modelo tiene serios problemas para identificar correctamente la clase minoritaria.
+		F1-Score				0,46	Buen resultado para un problema tan desbalanceado.
 	
 ## 🥇 Conclusiones y comunicación de resultados
-		El Random Forest está funcionando como un clasificador perezoso, aprovechando el gran número de no ganadores. Acierta en el 76% de las veces. Sin embargo, en un problema tan desbalanceado, esta métrica es engañosa. Sus dos mayores problemas son:
-		
-			1.	Demasiadas alarmas falsas (FP): 9.192 falsas predicciones de medalla.
-			
-			2.	Perdiendo demasiados ganadores (FN): 6.756 ganadores reales que el modelo no pudo ver.
+		El modelo es una herramienta valiosa y funcional para identificar atletas con potencial de medalla, logrando un desempeño adecuado a pesar del gran desbalance de datos.
