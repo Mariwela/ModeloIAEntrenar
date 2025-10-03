@@ -149,7 +149,7 @@ El país de origen es un predictor extremadamente fuerte. Países como la antigu
 		
 		Recall (Sensibilidad)	0,46	De todos los atletas que realmente ganaron medalla, tu modelo logró identificar al 46%.
 		
-		F1-Score				0,46	Buen resultado para un problema tan desbalanceado.
+		F1-Score				0,48	Buen resultado para un problema tan desbalanceado.
 	
 ## 🥇 Conclusiones y comunicación de resultados
 		El modelo es una herramienta valiosa y funcional para identificar atletas con potencial de medalla, logrando un desempeño adecuado a pesar del gran desbalance de datos.
