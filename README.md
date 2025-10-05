@@ -7,7 +7,7 @@ Predicción de la probabilidad de obtener una medalla olímpica en función de c
 ### Dataset: 120 years of Olympic history: athletes and results
 https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data
 
-2 archivos .csv: athlete_events.csv que contiene información de los atletas y eventos y noc_regions.csv para mapear los códigos NOC a regiones/países.
+2 archivos .csv: athlete_events.csv que contiene información de los atletas y eventos y noc_regions.csv para mapear los códigos NOC a regiones/países. El dataset cubre los Juegos Olímpicos desde 1896 hasta 2016.
 
 ### ¿Por qué?
 Los Juegos Olímpicos son uno de los eventos deportivos más importantes del mundo, seguidos por millones de personas. Poder predecir la probabilidad de que un atleta gane una medalla, considerando sus características físicas y demográficas resulta un problema atractivo tanto para el público general como para la investigación académica. Es un tema transversal y multidisciplinar: combina historia, geopolítica, economía, cultura y deporte.
@@ -66,22 +66,23 @@ Este desequilibrio se origina en el hecho de que la cantidad de participantes en
 ### Análisis de datos faltantes (Nulos)
 Años	  	9.484	  		3,5%
 
-Altura		60.171			22,2%
+Altura		60.171			22%
 
-Peso	  	62.875			23,2%
+Peso	  	62.875			23%
 
-Las variables altura y peso tienen más de una quinta parte de sus valores faltantes.
+La cantidad de nulos en la variable años de baja, se puede imputar o ignorar.
+De altura y peso es moderada y relevante para el análisis de atletas.
 
 ### Exploración de Variables Numéricas (Age, Height, Weight)
-Variable	Media aprox.	Mediana aprox.	Desviación Estándar aprox.
+Variable	Media aprox.	Mediana aprox.	Desviación Estándar aprox.   Min-Max
 
-Años	    25,6 años	    25 años	        6,4 años
+Años	    25,6 años	    25 años	        6,4 años					10 - 97
 
-Altura	  	175,3 cm	    175,0 cm	    10,5 cm
+Altura	  	175,3 cm	    175,0 cm	    10,5 cm						127 - 236
 
-Peso	    70,7 kg	      	70,0 kg	        14,3 kg
+Peso	    70,7 kg	      	70,0 kg	        14,3 kg						25 - 214
 
-Las distribuciones son relativamente normales.
+Las distribuciones son relativamente normales, pero con una gran variación, (ej. la participación de atletas muy jóvenes y muy mayores, la diversidad de tipos de cuerpos requeridos para diferentes deportes).
 
 ### Variable	Comparación Ganó Medalla
 0 vs. 1	Implicación Predictiva
