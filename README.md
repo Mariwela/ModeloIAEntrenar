@@ -96,7 +96,7 @@ La mediana de altura de los ganadores es ligeramente superior a la de los no gan
 Peso
 La mediana de peso de los ganadores es ligeramente superior a la de los no ganadores.	La relación peso/altura (IMC) podría ser más predictiva que el peso solo.
 
-### Exploración de Variables Categóricas (Sex, NOC)
+### Exploración de Variables Categóricas (Sex, NOC, Sport)
 Sexo
 Sexo	Tasa de éxito
 M (Male)	  	13%
