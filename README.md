@@ -156,15 +156,17 @@ La variable Sport es el predictor más fuerte de ganar una medalla, ya que la pr
 	
 ## 🤺 Evaluación del modelo
 	
-		Precision (Precisión)	(0,50)	De todos los atletas que modelo selecciona como posibles ganadores (predicciones positivas), uno de cada dos es, en realidad, un medallista.
+		Precision (Precisión)	(0,50)	De todos los atletas que modelo selecciona como posibles ganadores (predicciones positivas), uno de cada dos es, en realidad, un medallista. El modelo es propenso a las alertas falsas.
 		
-		Recall (Sensibilidad)	(0,46)	De todos los atletas que realmente ganaron medalla, el modelo logró identificar al 46%.
+		Recall (Sensibilidad)	(0,46)	De todos los atletas que realmente ganaron medalla, el modelo logró identificar al 46%.	El modelo no es bueno capturando todos los casos positivos.
 		
-		F1-Score				(0,48)	Buen resultado para un problema tan desbalanceado.
+		F1-Score				(0,48)	Bajo, pero buen resultado para un problema tan desbalanceado.
 
-		Accuracy 				(0.85)	Acierta en el 85% de las predicciones totales.
+		Accuracy 				(0.85)	Acierta en el 85% de las predicciones totales. A primera vista parece muy bueno. Sin embargo, esta alta exactitud está sesgado por la clase mayoritaria.
 
+		Macro Avg (F1-Score 0.69): Calcula el promedio simple del F1-Score de las dos clases. Indica un rendimiento general moderado.
 		
+		Weighted Avg (F1-Score 0.84): Calcula el promedio ponderado por el número de casos (Soporte) de cada clase. Como la Clase 0 tiene un soporte mucho mayor, este promedio es mucho más alto (0.84) y se acerca al accuracy global.	
 	
 ## 🥇 Conclusiones y comunicación de resultados
-		El modelo es una herramienta valiosa y funcional para identificar atletas con potencial de medalla, logrando un desempeño adecuado a pesar del gran desbalance de datos.
+		El modelo tiene un problema de sesgo hacia la clase mayoritaria. Sus predicciones fallan en detectar a la mitad de los medallistas reales (bajo Recall de 0.46).
