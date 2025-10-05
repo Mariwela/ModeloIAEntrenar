@@ -30,7 +30,7 @@ Los Juegos Olímpicos son uno de los eventos deportivos más importantes del mun
  
 ## 🎾 Definición del problema
 
-¿Es posible predecir si un atleta ganará una medalla olímpica utilizando como variables explicativas su sexo, edad, estatura, peso y país de origen?
+¿Es posible predecir si un atleta ganará una medalla olímpica utilizando como variables explicativas su sexo, edad, estatura, peso, el deporte en que compite y su país de origen?
 Clasificación binaria.
 
 El objetivo es clasificar cada atleta, utilizando las características físicas y demográficas:
