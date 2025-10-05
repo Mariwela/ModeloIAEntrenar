@@ -7,6 +7,8 @@ Predicción de la probabilidad de obtener una medalla olímpica en función de c
 ### Dataset: 120 years of Olympic history: athletes and results
 https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results/data
 
+2 archivos .csv: athlete_events.csv que contiene información de los atletas y eventos y noc_regions.csv para mapear los códigos NOC a regiones/países.
+
 ### ¿Por qué?
 Los Juegos Olímpicos son uno de los eventos deportivos más importantes del mundo, seguidos por millones de personas. Poder predecir la probabilidad de que un atleta gane una medalla, considerando sus características físicas y demográficas resulta un problema atractivo tanto para el público general como para la investigación académica. Es un tema transversal y multidisciplinar: combina historia, geopolítica, economía, cultura y deporte.
 
