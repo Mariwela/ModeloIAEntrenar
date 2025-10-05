@@ -50,7 +50,7 @@ ganar medalla (sí/no)
  	Estatura - numérica
  	Peso - numérica
  	País de origen - categórica
-	Sport - categórica
+	Deporte - categórica
  
 ## 🤼 Exploración inicial de datos (EDA)
 
