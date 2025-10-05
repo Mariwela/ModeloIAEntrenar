@@ -76,7 +76,7 @@ De altura y peso es moderada y relevante para el análisis de atletas.
 ### Exploración de Variables Numéricas (Age, Height, Weight)
 Variable	Media aprox.	Mediana aprox.	Desviación Estándar aprox.   Min-Max
 
-Años	    25,6 años	    25 años	        6,4 años					10 - 97
+Años	    25,6 años	    25 años	        6,4 años					10 - 97/72
 
 Altura	  	175,3 cm	    175,0 cm	    10,5 cm						127 - 236
 
