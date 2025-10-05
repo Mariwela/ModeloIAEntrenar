@@ -1,6 +1,6 @@
 # ModeloIA Deporte/Juegos olímpicos 🏟
 
-Predicción de la probabilidad de obtener una medalla olímpica en función de características demográficas y físicas del atleta y del país de origen.
+Predicción de la probabilidad de obtener una medalla olímpica en función de características demográficas y físicas del atleta y del tipo de deporte.
 
 ## 🏊 Elección del dataset
 
