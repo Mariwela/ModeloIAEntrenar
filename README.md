@@ -99,8 +99,8 @@ La mediana de peso de los ganadores es ligeramente superior a la de los no ganad
 ### Exploración de Variables Categóricas (Sex, NOC)
 Sexo
 Sexo	Tasa de éxito
-M (Male)	  	13,7%
-F (Female)		16,8%
+M (Male)	  	13%
+F (Female)		16%
 
 Las mujeres tienen una tasa de éxito por participación ligeramente superior a la de los hombres. Esto puede deberse a la menor variedad de eventos de participación femenina en los primeros años del historial olímpico.
 
@@ -108,11 +108,18 @@ Las mujeres tienen una tasa de éxito por participación ligeramente superior a 
 País de Origen
 
 País (NOC)				Total de medallas		Tasa de éxito
-USA	                  		5.600	    			19,5%
-URS (Unión Soviética)		2.500	    			26,0%
-GDR (Alemania Oriental)		1.500	  				32,0%
+USA	                  		5238	    			18%
+URS (Unión Soviética)		3371	    			21%
+GDR (Alemania Oriental)		2855	  				20%
+UK							1709					12%
 
 El país de origen es un predictor extremadamente fuerte. Países como la antigua Alemania Oriental o la Unión Soviética, a pesar de tener menos participaciones totales que EE. UU., tienen una tasa de éxito por participación mucho mayor debido a sus políticas deportivas intensivas.
+
+
+Deporte
+
+La variable Sport es el predictor más fuerte de ganar una medalla, ya que la probabilidad depende del tipo de competencia (individual vs. equipo) y el número de eventos. Un atleta tiene una probabilidad mucho mayor de ganar una medalla si participa en un deporte de equipo en comparación con un deporte individual.
+
 
 ## 🛶 Preprocesamiento de datos	
 ### Valores nulos:
